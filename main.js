@@ -5,6 +5,16 @@ import { log } from 'console';
 const PORT = 8000
 var buf = new Buffer.alloc(1024);
 
+// fs.unlink('data/hello.txt', (err)=>{
+//    if (err) console.log(err);
+//    console.log('file deleted successfully');
+// });
+
+fs.mkdir('/src', (err)=>{
+   if(err) console.log(err);
+   console.log('folder created');
+})
+
 
 fs.writeFile('gmc.txt', 'Hello wlcome to gmc', (err)=>{
    if(err) console.log(err);
